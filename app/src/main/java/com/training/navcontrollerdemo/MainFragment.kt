@@ -48,7 +48,10 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         detailButton.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_mainFragment_to_detailFragment)
+            val action = MainFragmentDirections.actionMainFragmentToDetailFragment()
+            action.arg1 = "Passed Param1"
+            action.arg2 = "Passed Param2"
+            Navigation.findNavController(it).navigate(action)
         }
     }
 

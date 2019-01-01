@@ -41,7 +41,7 @@ class DetailFragment : Fragment() {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_detail, container, false)
         detailText = view.findViewById(R.id.detail_text)
-        detailText.text = "Welcome to Detail Fragment"
+        detailText.text = "$param1 : $param2"
         return view
     }
 
