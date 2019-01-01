@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.Navigation
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -47,7 +48,7 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         detailButton.setOnClickListener {
-            //TODO
+            Navigation.findNavController(it).navigate(R.id.action_mainFragment_to_detailFragment)
         }
     }
 
